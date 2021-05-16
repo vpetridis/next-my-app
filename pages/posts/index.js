@@ -16,7 +16,7 @@ export default function Posts({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.HOST}/posts`)
+  const res = await fetch(`https://serene-falls-74612.herokuapp.com/posts`)
   const posts = await res.json()
   return { props: { posts: posts } }
 }
